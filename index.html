@@ -1,51 +1,189 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hello</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hello</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+background:#FFFBDF;
+color:#30382F;
+line-height:1.6;
+}
+
+header{
+background:#30382F;
+color:#FFFBDF;
+padding:20px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+flex-wrap:wrap;
+}
+
+header h1{
+font-size:28px;
+}
+
+nav a{
+color:#FFFBDF;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+position:relative;
+}
+
+nav a::after{
+content:"";
+position:absolute;
+left:0;
+bottom:-5px;
+width:0;
+height:2px;
+background:#FFFBDF;
+transition:0.3s;
+}
+
+nav a:hover::after{
+width:100%;
+}
+
+main{
+width:85%;
+margin:40px auto;
+}
+
+section{
+background:white;
+padding:30px;
+margin-bottom:25px;
+border-radius:10px;
+box-shadow:0 4px 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+section:hover{
+transform:translateY(-5px);
+box-shadow:0 8px 18px rgba(0,0,0,0.15);
+}
+
+section h2{
+margin-bottom:15px;
+}
+
+article{
+margin-top:15px;
+padding:15px;
+background:#f5f5f5;
+border-radius:6px;
+}
+
+ul{
+margin-top:15px;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:10px;
+list-style:none;
+}
+
+ul li{
+background:#30382F;
+color:#FFFBDF;
+padding:12px;
+border-radius:6px;
+text-align:center;
+font-weight:bold;
+transition:0.3s;
+}
+
+ul li:hover{
+background:#505b4d;
+transform:scale(1.05);
+}
+
+footer{
+background:#30382F;
+color:#FFFBDF;
+text-align:center;
+padding:20px;
+margin-top:40px;
+font-size:14px;
+}
+
+@media(max-width:768px){
+
+header{
+flex-direction:column;
+text-align:center;
+}
+
+nav{
+margin-top:10px;
+}
+
+nav a{
+margin:0 10px;
+}
+
+main{
+width:92%;
+}
+
+}
+
+</style>
 </head>
+
 <body>
 
-    <header>
-        <h1>My Website</h1>
-        <nav>
-            <a href="#">Home</a> |
-            <a href="#">About</a> |
-            <a href="#">Contact</a>
-               <a href="#">Footer</a>
-        </nav>
-    </header>
+<header>
+<h1>My Website</h1>
+<nav>
+<a href="#">Home</a>
+<a href="#">About</a>
+<a href="#">Contact</a>
+<a href="#">Footer</a>
+</nav>
+</header>
 
-    <main>
+<main>
 
-        <section>
-            <h2>Welcome</h2>
-            <p>This is the main content of the website.</p>
-        </section>
+<section>
+<h2>Welcome</h2>
+<p>This is the main content of the website. It provides an introduction to the site and highlights what visitors can expect to find here.</p>
+</section>
 
-        <section>
-            <h2>Latest News</h2>
-            <article>
-                <h3>Article Title</h3>
-                <p>This is an example article inside the main section.</p>
-            </article>
-        </section>
+<section>
+<h2>Latest News</h2>
+<article>
+<h3>Article Title</h3>
+<p>This is an example article inside the main section. It displays recent updates, announcements, or blog posts.</p>
+</article>
+</section>
 
-        <section>
-            <h2>Services</h2>
-            <ul>
-                <li>Web Development</li>
-                <li>System Design</li>
-                <li>Database Management</li>
-            </ul>
-        </section>
+<section>
+<h2>Services</h2>
+<ul>
+<li>Web Development</li>
+<li>System Design</li>
+<li>Database Management</li>
+</ul>
+</section>
 
-    </main>
+</main>
 
-    <footer>
-        <p>© 2026 My Website. All rights reserved.</p>
-    </footer>
+<footer>
+<p>© 2026 My Website. All rights reserved.</p>
+</footer>
 
 </body>
 </html>
